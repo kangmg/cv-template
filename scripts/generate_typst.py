@@ -68,8 +68,8 @@ def generate_header(cv: dict, meta: dict) -> str:
 // ============================================
 #let name = "{escape_typst(profile.get("name", "Your Name"))}"
 #let contacts = (
-  link("mailto:{profile.get("email", "")}")[{profile.get("email", "")}],
-  link("https://{profile.get("github", "")}")[{profile.get("github", "")}],
+  link("mailto:{profile.get("email", "")}")[{escape_typst(profile.get("email", ""))}],
+  link("https://{profile.get("github", "")}")[{escape_typst(profile.get("github", ""))}],
 )
 
 // ============================================
