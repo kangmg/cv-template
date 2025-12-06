@@ -58,7 +58,7 @@ After committing your changes:
 - Website deployed
 - `https://[username].github.io/[repo-name]/`
 
-### 📥 Download Files
+###  Download Files
 
 Once deployed, you can download the generated files directly:
 
@@ -76,11 +76,11 @@ https://[username].github.io/[repo-name]/data/cv_output.typ
 
 ---
 
-## 🔄 How It Works
+## How It Works
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                     USER EDITS (Local/GitHub)                    │
+│                     USER EDITS (Local/GitHub)                   │
 ├─────────────────────────────────────────────────────────────────┤
 │  cv.yml          template.yml        gallery.yml      asset/    │
 │  (CV data)       (sections)          (projects)       (images)  │
@@ -96,27 +96,27 @@ https://[username].github.io/[repo-name]/data/cv_output.typ
          └────────────────────────────────────────────────┘
                                   │
          ┌────────────────────────┴────────────────────────┐
-         │                                                  │
-         ▼                                                  ▼
+         │                                                 │
+         ▼                                                 ▼
 ┌─────────────────┐                              ┌──────────────────┐
 │  Python Build   │                              │   Web Build      │
 ├─────────────────┤                              ├──────────────────┤
 │ yml2json.py     │                              │ npm install      │
 │   ↓             │                              │   ↓              │
-│ cv-data.json    │──────┐                       │ Copy data/       │
-│ template.json   │      │                       │ Copy asset/      │
-│ gallery.json    │      │                       │   ↓              │
-│   ↓             │      │                       │ npm run build    │
-│ generate_typst  │      │                       │   ↓              │
-│   ↓             │      │                       │ web/dist/        │
-│ cv_output.typ   │      │                       └────────┬─────────┘
-│   ↓             │      │                                │
-│ typst compile   │      │                                │
-│   ↓             │      │                                │
-│ CV.pdf          │      │                                │
-└────────┬────────┘      │                                │
-         │               │                                │
-         └───────────────┴────────────────────────────────┘
+│ cv-data.json    │                              │ Copy data/       │
+│ template.json   │                              │ Copy asset/      │
+│ gallery.json    │                              │   ↓              │
+│   ↓             │                              │ npm run build    │
+│ generate_typst  │                              │   ↓              │
+│   ↓             │                              │ web/dist/        │
+│ cv_output.typ   │                              └────────┬─────────┘
+│   ↓             │                                       │
+│ typst compile   │                                       │
+│   ↓             │                                       │
+│ CV.pdf          │                                       │
+└────────┬────────┘                                       │
+         │                                                │
+         └────────────────────────────────────────────────┘
                                   │
                                   ▼
                     ┌──────────────────────────┐
@@ -124,8 +124,8 @@ https://[username].github.io/[repo-name]/data/cv_output.typ
                     └──────────────────────────┘
                                   │
          ┌────────────────────────┴────────────────────────┐
-         │                                                  │
-         ▼                                                  ▼
+         │                                                 │
+         ▼                                                 ▼
 ┌─────────────────┐                              ┌──────────────────┐
 │   Web UI        │                              │  Download Files  │
 ├─────────────────┤                              ├──────────────────┤
