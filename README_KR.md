@@ -18,37 +18,37 @@
 profile:
   name: "홍길동"
   title: "백엔드 개발자"
-  email: "hong@example.com"
-  github: "github.com/hong"
+  email: "your.email@example.com"
+  github: "github.com/username"
   update: "2025-01-01"
 
 # 자기소개
 research_interest: |
-  저는 웹 개발에 관심이 있으며...
+  웹 개발에 열정을 가지고 있습니다...
 
-# 기술 스택
+# 기술
 skills:
-  프로그래밍:
+  Programming:
     - "Python, JavaScript"
     - "React, Node.js"
-  언어:
+  Languages:
     - "한국어 (원어민)"
-    - "영어 (비즈니스)"
+    - "영어 (중급)"
 
 # 경력
 research_experience:
   - title: "백엔드 개발자"
-    duration: "2023.01 - 현재"
+    duration: "2023년 1월 - 현재"
     organization: "회사명"
     achievements:
-      - "API 서버 개발 및 운영"
+      - "API 서버 개발 및 유지보수"
       - "성능 50% 개선"
 
 # 학력
 education:
-  university: "OO대학교"
-  duration: "2019.03 - 2023.02"
-  degree: "컴퓨터공학과 학사"
+  university: "대학교명"
+  duration: "2019년 3월 - 2023년 2월"
+  degree: "컴퓨터공학 학사"
   gpa: "4.0 / 4.5"
 ```
 

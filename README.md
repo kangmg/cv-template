@@ -16,10 +16,10 @@ Open `cv.yml` and update with your information:
 ```yaml
 # Basic Info
 profile:
-  name: "John Doe"
-  title: "Backend Developer"
-  email: "john@example.com"
-  github: "github.com/johndoe"
+  name: "Your Name"
+  title: "Your Job Title"
+  email: "your.email@example.com"
+  github: "github.com/username"
   update: "2025-01-01"
 
 # About Me
