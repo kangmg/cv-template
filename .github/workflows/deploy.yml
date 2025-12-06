@@ -29,10 +29,10 @@ jobs:
           python scripts/yml2json.py gallery.yml data/gallery.json
           python scripts/generate_typst.py
 
-      - name: Install Typst and Compile PDF
+      - name: Compile PDF
         run: |
-          curl -fsSL https://typst.community/typst-install/install.sh | sh
-          $HOME/.local/bin/typst compile --root . output/cv_output.typ output/CV.pdf
+          chmod +x typst/typst
+          ./typst/typst compile --root . output/cv_output.typ output/CV.pdf
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
