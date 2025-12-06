@@ -1,10 +1,10 @@
 # CV Template
 
-> 🌏 **한국어** | [English](README.md)
+> **한국어** | [English](README.md)
 
-📝 **YAML 파일만 수정하면 자동으로 이력서 웹사이트와 PDF가 생성됩니다!**
+**YAML 파일만 수정하면 자동으로 이력서 웹사이트와 PDF가 생성됩니다!**
 
-## 🚀 빠른 시작 (5분)
+## 빠른 시작 (5분)
 
 ### 1단계: 저장소 Fork
 1. 이 저장소를 Fork 하세요
@@ -54,13 +54,13 @@ education:
 
 ### 3단계: 푸시하면 자동 배포!
 수정 후 커밋하면 자동으로:
-- ✅ PDF 생성
-- ✅ 웹사이트 배포
-- 📍 `https://[username].github.io/[repo-name]/`
+- PDF 생성
+- 웹사이트 배포
+- `https://[username].github.io/[repo-name]/`
 
 ---
 
-## ⚙️ 섹션 커스터마이징 (template.yml)
+## 섹션 커스터마이징 (template.yml)
 
 섹션 순서를 바꾸거나, 이름을 변경하거나, 비활성화할 수 있습니다:
 
@@ -95,7 +95,7 @@ sections:
 
 ---
 
-## 📁 프로젝트 갤러리 (gallery.yml)
+## 프로젝트 갤러리 (gallery.yml)
 
 ```yaml
 project_highlights:
@@ -110,7 +110,7 @@ project_highlights:
 
 ---
 
-## 💻 로컬 개발 (선택)
+## 로컬 개발 (선택)
 
 ```bash
 # 1. 의존성 설치
@@ -126,16 +126,13 @@ cd web && npm run dev
 
 ---
 
-## 📋 구조
+## 구조
 
 ```
-├── cv.yml           # 📝 내 이력서 데이터
-├── template.yml     # ⚙️ 섹션 설정
-├── gallery.yml      # 🖼️ 갤러리 데이터
+├── cv.yml           # 내 이력서 데이터
+├── template.yml     # 섹션 설정
+├── gallery.yml      # 갤러리 데이터
 ├── scripts/         # 빌드 스크립트
 ├── typst/           # PDF 생성기
 └── web/             # 웹 UI
 ```
-
-## License
-MIT

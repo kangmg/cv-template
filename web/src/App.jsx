@@ -1,68 +1,38 @@
 import { useState, useEffect } from 'react'
+import {
+  FileText,
+  FileDown,
+  Grid,
+  Mail,
+  Github,
+  Globe,
+  Moon,
+  Sun,
+  Microscope,
+  Code,
+  FlaskConical,
+  GraduationCap,
+  FolderOpen,
+  Trophy,
+  Award,
+  Wallet,
+  BookOpen,
+  Shield
+} from 'lucide-react'
 import './App.css'
 
-// Icons as simple SVG components
-const FileText = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-    <polyline points="14,2 14,8 20,8" />
-    <line x1="16" y1="13" x2="8" y2="13" />
-    <line x1="16" y1="17" x2="8" y2="17" />
-    <polyline points="10,9 9,9 8,9" />
-  </svg>
-)
-
-const FileDown = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-    <polyline points="14,2 14,8 20,8" />
-    <line x1="12" y1="18" x2="12" y2="12" />
-    <polyline points="9,15 12,18 15,15" />
-  </svg>
-)
-
-const Grid = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-    <rect x="3" y="3" width="7" height="7" />
-    <rect x="14" y="3" width="7" height="7" />
-    <rect x="14" y="14" width="7" height="7" />
-    <rect x="3" y="14" width="7" height="7" />
-  </svg>
-)
-
-const Mail = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-    <polyline points="22,6 12,13 2,6" />
-  </svg>
-)
-
-const Github = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-  </svg>
-)
-
-const Globe = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-    <circle cx="12" cy="12" r="10" />
-    <line x1="2" y1="12" x2="22" y2="12" />
-    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-  </svg>
-)
-
-// Section icons
+// Section icon mapping
 const sectionIcons = {
-  'Research Interest': '🔬',
-  'Skills': '💻',
-  'Research Experience': '🧪',
-  'Education': '🎓',
-  'Projects': '📂',
-  'Scholarships': '🏆',
-  'Awards & Honors': '🏅',
-  'Research Grants': '💰',
-  'Additional Activity': '📚',
-  'Military Service': '🛡️',
+  'Research Interest': Microscope,
+  'Skills': Code,
+  'Research Experience': FlaskConical,
+  'Education': GraduationCap,
+  'Projects': FolderOpen,
+  'Scholarships': Trophy,
+  'Awards & Honors': Award,
+  'Research Grants': Wallet,
+  'Additional Activity': BookOpen,
+  'Military Service': Shield,
 }
 
 function App() {
@@ -72,11 +42,28 @@ function App() {
   const [galleryData, setGalleryData] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const [theme, setTheme] = useState('light')
+
+  // Theme initialization
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') ||
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+    setTheme(savedTheme)
+    document.documentElement.setAttribute('data-theme', savedTheme)
+  }, [])
+
+  // Theme toggle handler
+  const toggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light'
+    setTheme(newTheme)
+    localStorage.setItem('theme', newTheme)
+    document.documentElement.setAttribute('data-theme', newTheme)
+  }
 
   useEffect(() => {
     async function loadData() {
       try {
-        // Load JSON data files
+        // Load JSON data files with relative paths
         const [cvRes, templateRes, galleryRes] = await Promise.all([
           fetch('./data/cv-data.json'),
           fetch('./data/template.json'),
@@ -123,51 +110,59 @@ function App() {
     <div className="app">
       {/* Header */}
       <header className="header">
-        <h1>{profile.name || 'CV Template'}</h1>
-        <p className="subtitle">{profile.title}</p>
-        {profile.update && (
-          <p className="update-date">Last updated: {profile.update}</p>
-        )}
+        <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
+          {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+        </button>
+
+        <div className="header-content">
+          <h1>{profile.name || 'CV Template'}</h1>
+          <p className="subtitle">{profile.title}</p>
+          {profile.update && (
+            <p className="update-date">Last updated: {profile.update}</p>
+          )}
+        </div>
       </header>
 
       {/* Navigation */}
-      <nav className="nav">
-        <button
-          className={`nav-btn ${activeTab === 'cv' ? 'active' : ''}`}
-          onClick={() => setActiveTab('cv')}
-        >
-          <FileText /> CV
-        </button>
-        <button
-          className={`nav-btn ${activeTab === 'pdf' ? 'active' : ''}`}
-          onClick={() => setActiveTab('pdf')}
-        >
-          <FileDown /> PDF
-        </button>
-        <button
-          className={`nav-btn ${activeTab === 'gallery' ? 'active' : ''}`}
-          onClick={() => setActiveTab('gallery')}
-        >
-          <Grid /> Gallery
-        </button>
-      </nav>
+      <div className="nav-container">
+        <nav className="nav">
+          <button
+            className={`nav-btn ${activeTab === 'cv' ? 'active' : ''}`}
+            onClick={() => setActiveTab('cv')}
+          >
+            <FileText size={18} /> CV
+          </button>
+          <button
+            className={`nav-btn ${activeTab === 'pdf' ? 'active' : ''}`}
+            onClick={() => setActiveTab('pdf')}
+          >
+            <FileDown size={18} /> PDF
+          </button>
+          <button
+            className={`nav-btn ${activeTab === 'gallery' ? 'active' : ''}`}
+            onClick={() => setActiveTab('gallery')}
+          >
+            <Grid size={18} /> Gallery
+          </button>
+        </nav>
+      </div>
 
       <main className="main">
         {/* Contact Info */}
         <div className="contact-info">
           {profile.email && (
             <a className="contact-item" href={`mailto:${profile.email}`}>
-              <Mail /> {profile.email}
+              <Mail size={16} /> {profile.email}
             </a>
           )}
           {profile.github && (
             <a className="contact-item" href={`https://${profile.github}`} target="_blank" rel="noopener noreferrer">
-              <Github /> {profile.github}
+              <Github size={16} /> {profile.github}
             </a>
           )}
           {profile.blog && (
             <a className="contact-item" href={`https://${profile.blog}`} target="_blank" rel="noopener noreferrer">
-              <Globe /> {profile.blog}
+              <Globe size={16} /> {profile.blog}
             </a>
           )}
         </div>
@@ -208,12 +203,12 @@ function CVContent({ cvData, sections }) {
 function Section({ name, template, data, cvData }) {
   if (!data) return null
 
-  const icon = sectionIcons[name] || '📄'
+  const IconComponent = sectionIcons[name] || FileText
 
   return (
     <section className="section">
       <div className="section-header">
-        <span>{icon}</span>
+        <IconComponent size={20} />
         <h2>{name}</h2>
       </div>
       <div className="section-content">
