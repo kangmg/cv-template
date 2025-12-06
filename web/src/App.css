@@ -410,31 +410,161 @@ body {
 }
 
 /* Education */
-.education-info {
+.education {
   display: grid;
-  gap: 0.75rem;
+  gap: 1.5rem;
 }
 
-.education-row {
+.education-item {
+  position: relative;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--border-muted);
+}
+
+.education-item::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 0.25rem;
+  width: 8px;
+  height: 8px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  border: 2px solid var(--bg-primary);
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.education-degree {
+  flex: 1;
+}
+
+.education-title {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.education-field {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.education-duration {
+  font-size: 0.8125rem;
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+  background: var(--bg-tertiary);
+  padding: 0.125rem 0.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-muted);
+  white-space: nowrap;
+}
+
+.education-details {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.25rem;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
   background: var(--bg-tertiary);
   border-radius: var(--radius);
   border: 1px solid var(--border-muted);
 }
 
-.education-label {
-  font-weight: 600;
-  color: var(--text-primary);
-  font-size: 0.9375rem;
+.education-university {
+  font-weight: 500;
+  color: var(--accent-color);
+  font-size: 0.875rem;
 }
 
-.education-value {
+.education-gpa {
   color: var(--text-secondary);
   font-weight: 500;
   font-size: 0.875rem;
+}
+
+/* Publications */
+.publications {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.publication-item {
+  display: flex;
+  gap: 0.75rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-muted);
+}
+
+.publication-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.publication-number {
+  font-weight: 700;
+  color: var(--text-tertiary);
+  font-size: 0.875rem;
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+}
+
+.publication-content {
+  flex: 1;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.publication-authors {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.publication-title {
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.publication-venue {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.publication-venue em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+.publication-venue strong {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.publication-doi {
+  font-size: 0.8125rem;
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+}
+
+.publication-doi a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.publication-doi a:hover {
+  text-decoration: underline;
 }
 
 /* Awards */
@@ -639,7 +769,21 @@ body {
     font-size: 0.8125rem;
   }
 
-  .education-row,
+  .education-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .education-duration {
+    align-self: flex-start;
+  }
+
+  .education-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
   .award-item {
     flex-direction: column;
     align-items: flex-start;

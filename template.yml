@@ -38,6 +38,10 @@ sections:
     template: "education"
     source: "education"
 
+  - name: "Publications"
+    template: "publications"
+    source: "publications"
+
   - name: "Projects"
     template: "experience_list"
     source: "projects"

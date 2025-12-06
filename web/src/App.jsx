@@ -216,6 +216,7 @@ function Section({ name, template, data, cvData }) {
         {template === 'skills_list' && <SkillsList data={data} />}
         {template === 'experience_list' && <ExperienceList data={data} />}
         {template === 'education' && <Education data={data} />}
+        {template === 'publications' && <Publications data={data} />}
         {template === 'awards' && <Awards data={data} />}
         {template === 'single_entry' && <SingleEntry data={data} />}
       </div>
@@ -289,18 +290,56 @@ function ExperienceList({ data }) {
 }
 
 function Education({ data }) {
-  if (!data || typeof data !== 'object') return null
+  if (!data) return null
+
+  // Handle both old format (single dict) and new format (list of dicts)
+  const degrees = Array.isArray(data) ? data : [data]
 
   return (
-    <div className="education-info">
-      <div className="education-row">
-        <span className="education-label">{data.university}</span>
-        <span className="education-value">{data.duration}</span>
-      </div>
-      <div className="education-row">
-        <span className="education-label">{data.degree}</span>
-        <span className="education-value">GPA: {data.gpa}</span>
-      </div>
+    <div className="education">
+      {degrees.map((degree, i) => (
+        <div key={i} className="education-item">
+          <div className="education-header">
+            <div className="education-degree">
+              <div className="education-title">{degree.degree}</div>
+              <div className="education-field">{degree.field}</div>
+            </div>
+            <div className="education-duration">{degree.duration}</div>
+          </div>
+          <div className="education-details">
+            <span className="education-university">{degree.university}</span>
+            <span className="education-gpa">GPA: {degree.gpa}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  )
+}
+
+function Publications({ data }) {
+  if (!Array.isArray(data)) return null
+
+  return (
+    <div className="publications">
+      {data.map((pub, i) => (
+        <div key={i} className="publication-item">
+          <div className="publication-number">{i + 1}.</div>
+          <div className="publication-content">
+            <div className="publication-authors">{pub.authors}</div>
+            <div className="publication-title">"{pub.title}"</div>
+            <div className="publication-venue">
+              <em>{pub.journal}</em> <strong>{pub.year}</strong>
+              {pub.volume && `, ${pub.volume}`}
+              {pub.pages && `, ${pub.pages}`}.
+            </div>
+            {pub.doi && (
+              <div className="publication-doi">
+                DOI: <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer">{pub.doi}</a>
+              </div>
+            )}
+          </div>
+        </div>
+      ))}
     </div>
   )
 }

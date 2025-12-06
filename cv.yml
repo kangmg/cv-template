@@ -83,39 +83,62 @@ research_experience:
       - "Assisted in data analysis and visualization for research publications"
       - "Developed scripts for automating computational workflows"
 
-# Education
+# Education (now supports multiple degrees)
 education:
-  university: "State University"
-  duration: "Sep 2021 - Present"
-  degree: "Ph.D. in Chemistry (Computational Chemistry Track)"
-  gpa: "3.92 / 4.00"
+  - degree: "Ph.D. in Chemistry"
+    field: "Computational Chemistry Track"
+    university: "State University"
+    duration: "Sep 2021 - Present"
+    gpa: "3.92 / 4.00"
+    
+  - degree: "M.S. in Chemistry"
+    field: "Physical Chemistry"
+    university: "State University"
+    duration: "Sep 2019 - Aug 2021"
+    gpa: "3.88 / 4.00"
+    
+  - degree: "B.S. in Chemistry"
+    field: "Chemistry Major"
+    university: "Previous University"
+    duration: "Mar 2015 - Feb 2019"
+    gpa: "3.75 / 4.00"
 
-# Publications (as projects)
-projects:
+# Publications
+publications:
   - title: "Novel Computational Methods for Reaction Prediction"
-    duration: "2024"
-    organization: "Journal of Computational Chemistry (First Author)"
-    link: "https://doi.org/10.1002/jcc.example"
-    achievements:
-      - "Developed new algorithms for predicting chemical reaction outcomes"
-      - "Validated methods against experimental benchmark datasets"
-      - "Released open-source implementation for community use"
-
+    authors: "Your Name, Collaborator A, Collaborator B"
+    journal: "Journal of Computational Chemistry"
+    year: "2024"
+    volume: "45(10)"
+    pages: "1234-1245"
+    doi: "10.1002/jcc.example1"
+    
   - title: "Machine Learning Models for Molecular Property Prediction"
-    duration: "2023"
-    organization: "Journal of Chemical Information and Modeling (First Author)"
-    achievements:
-      - "Designed neural network architectures for molecular representation"
-      - "Achieved state-of-the-art performance on standard benchmarks"
-      - "Analyzed model interpretability and feature importance"
-
+    authors: "Your Name, Co-author C"
+    journal: "Journal of Chemical Information and Modeling"
+    year: "2023"
+    volume: "63(8)"
+    pages: "2345-2356"
+    doi: "10.1021/acs.jcim.example2"
+    
   - title: "Computational Study of Catalytic Systems"
-    duration: "2023"
-    organization: "Chemical Physics Letters (Co-author)"
+    authors: "Lead Author, Your Name, Senior Author"
+    journal: "Chemical Physics Letters"
+    year: "2023"
+    volume: "820"
+    pages: "140445"
+    doi: "10.1016/j.cplett.example3"
+
+# Projects (keeping for backward compatibility)
+projects:
+  - title: "Open-Source ML Toolkit for Chemistry"
+    duration: "2024"
+    organization: "GitHub Repository"
+    link: "https://github.com/example/ml-chem-toolkit"
     achievements:
-      - "Investigated reaction mechanisms using density functional theory"
-      - "Identified key intermediates and transition states"
-      - "Provided insights for experimental catalyst design"
+      - "Developed Python package for molecular property prediction"
+      - "Released trained models and datasets for community use"
+      - "Documentation and tutorials for new users"
 
 # Awards and Honors
 awards:

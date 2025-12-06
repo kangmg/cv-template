@@ -167,23 +167,75 @@ def generate_experience_list(name: str, data: list) -> str:
     
     return result
 
-def generate_education(name: str, data: dict) -> str:
-    """Generate education template section."""
-    if not data or not isinstance(data, dict):
+def generate_education(name: str, data) -> str:
+    """Generate education template section - supports both single dict and list."""
+    if not data:
         return ""
     
-    return f'''// ============================================
+    # Handle both old format (single dict) and new format (list of dicts)
+    degrees = data if isinstance(data, list) else [data]
+    
+    result = f'''// ============================================
 = {name}
 // ============================================
-#edu(
-  institution: "{escape_typst(data.get("university", ""))}",
-  date: "{escape_typst(data.get("duration", ""))}",
-  location: "",
-  gpa: "{escape_typst(data.get("gpa", ""))}",
-  extra: "{escape_typst(data.get("degree", ""))}",
+'''
+    
+    for degree in degrees:
+        if not isinstance(degree, dict):
+            continue
+            
+        degree_name = escape_typst(degree.get("degree", ""))
+        field = escape_typst(degree.get("field", ""))
+        university = escape_typst(degree.get("university", ""))
+        duration = escape_typst(degree.get("duration", ""))
+        gpa = escape_typst(degree.get("gpa", ""))
+        
+        result += f'''#exp(
+  title: "{degree_name}",
+  organization: "{university}",
+  date: "{duration}",
+  location: "{field}",
+  details: list("GPA: {gpa}"),
 )
 
 '''
+    
+    return result
+
+def generate_publications(name: str, data: list) -> str:
+    """Generate publications template section."""
+    if not data or not isinstance(data, list):
+        return ""
+    
+    result = f'''// ============================================
+= {name}
+// ============================================
+'''
+    
+    for i, pub in enumerate(data, 1):
+        title = escape_typst(pub.get("title", ""))
+        authors = escape_typst(pub.get("authors", ""))
+        journal = escape_typst(pub.get("journal", ""))
+        year = escape_typst(pub.get("year", ""))
+        volume = escape_typst(pub.get("volume", ""))
+        pages = escape_typst(pub.get("pages", ""))
+        doi = pub.get("doi", "")
+        
+        # Format citation
+        citation = f"{authors}. \"{title}.\" _{journal}_ *{year}*"
+        if volume:
+            citation += f", {volume}"
+        if pages:
+            citation += f", {pages}"
+        citation += "."
+        
+        result += f'''#{i}. {citation}
+'''
+        if doi:
+            result += f'   DOI: link("https://doi.org/{doi}")[{doi}]\n'
+        result += '\n'
+    
+    return result
 
 def generate_awards(name: str, data: list) -> str:
     """Generate awards template section."""
@@ -283,6 +335,7 @@ def main():
         "skills_list": generate_skills_list,
         "experience_list": generate_experience_list,
         "education": generate_education,
+        "publications": generate_publications,
         "awards": generate_awards,
         "single_entry": generate_single_entry,
     }
