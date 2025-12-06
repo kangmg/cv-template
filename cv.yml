@@ -32,27 +32,23 @@ skills:
     - "Julia (Intermediate)"
     - "Bash/Shell Scripting"
   
-  ML_Frameworks:
-    - "PyTorch, TensorFlow"
-    - "Scikit-learn, XGBoost"
-    - "JAX, Flax"
-  
   Computational_Chemistry:
     - "Gaussian, ORCA, Psi4"
     - "GROMACS, AMBER"
     - "RDKit, OpenBabel"
     - "ASE, PyMOL"
   
-  Tools_and_Technologies:
+  ML_and_Data_Science:
+    - "PyTorch, TensorFlow"
+    - "Scikit-learn, XGBoost"
+    - "JAX, Flax"
+    - "NumPy, Pandas"
+  
+  Tools_and_HPC:
     - "Git, Docker, Singularity"
-    - "HPC/SLURM"
+    - "HPC/SLURM, Linux"
     - "Jupyter, VSCode"
     - "LaTeX, Markdown"
-  
-  Languages:
-    - "English (Fluent)"
-    - "Korean (Native)"
-    - "Spanish (Conversational)"
 
 # Research Experience
 research_experience:
