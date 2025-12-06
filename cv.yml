@@ -1,0 +1,120 @@
+# CV Data
+# This file contains your CV content
+# Edit this file to customize your CV
+
+# Profile information (displayed in header)
+profile:
+  name: "Your Name"
+  title: "Your Title / Position"
+  email: "your.email@example.com"
+  github: "github.com/yourusername"
+  blog: "yourblog.com"
+  update: "2025-01-01"
+
+# Research Interest - text_block template
+# Format: Plain text or multiline string
+research_interest: |
+  My research interests focus on understanding phenomena at the microscopic 
+  level through computational methodologies and accelerating these investigations using AI. 
+  Based on this fundamental understanding, I aim to explore and design novel solutions.
+
+# Keywords (optional, displayed after research interest)
+keywords:
+  - "Keyword 1"
+  - "Keyword 2"
+  - "Machine Learning"
+
+# Skills - skills_list template
+# Format: Category name as key, list of skills as value
+skills:
+  Technical Skills:
+    - "Skill 1: Description"
+    - "Skill 2: Description"
+  Programming:
+    - "Python, JavaScript"
+    - "Git, Docker"
+  Languages:
+    - "English (Fluent)"
+    - "Korean (Native)"
+
+# Research Experience - experience_list template
+# Format: List of entries with title, duration, organization, advisor, achievements
+research_experience:
+  - title: "Research Project Title"
+    duration: "January 2024 - Present"
+    organization: "Lab Name, University"
+    advisor: "Prof. Advisor Name"
+    achievements:
+      - "Achievement 1 description"
+      - "Achievement 2 description"
+
+  - title: "Previous Research"
+    duration: "June 2023 - December 2023"
+    organization: "Research Institute"
+    advisor: "Prof. Another Advisor"
+    achievements:
+      - "Completed significant research milestone"
+      - "Published findings in conference"
+
+# Education - education template
+# Format: Single entry with university, duration, degree, gpa
+education:
+  university: "Your University"
+  duration: "March 2019 - Present"
+  degree: "B.S. in Your Major"
+  gpa: "4.0 / 4.5"
+
+# Projects - experience_list template (reuses same format)
+# Format: List of project entries
+projects:
+  - title: "Project Name"
+    link: "https://github.com/username/project"
+    duration: "2024"
+    extra:
+      - "Tag 1"
+      - "Tag 2"
+    achievements:
+      - "Built feature X"
+      - "Implemented functionality Y"
+
+  - title: "Another Project"
+    link: ""
+    duration: ""
+    extra: []
+    achievements:
+      - "Description of what was accomplished"
+
+# Scholarships - awards template
+# Format: List with name, institution, year, amount
+scholarships:
+  - name: "Scholarship Name"
+    institution: "Awarding Institution"
+    year: "2024"
+    amount: "USD 5,000"
+
+# Awards & Honors - awards template
+awards_honors:
+  - name: "Award Name"
+    institution: "Awarding Institution"
+    year: "2024"
+    amount: ""
+
+# Research Grants - awards template
+grants:
+  - name: "Grant Name"
+    institution: "Funding Agency"
+    year: "2024"
+    amount: "USD 10,000"
+
+# Additional Activity - single_entry template
+# Format: Single entry with activity, duration, description
+additional_activity:
+  activity: "Activity Name"
+  duration: "February 2024 - July 2024"
+  description: "Completed intensive program on relevant topic"
+
+# Military Service - single_entry template (optional, can be removed)
+military_service:
+  branch: "Service Branch"
+  rank: "Rank"
+  duration: "April 2021 - October 2022"

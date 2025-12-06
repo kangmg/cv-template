@@ -1,0 +1,30 @@
+# Project Gallery Configuration
+# This file contains project highlights for the gallery view
+
+project_highlights:
+  - title: "Project Title 1"
+    image: "asset/image1.png?height=300&width=300"
+    period: "2025.01"
+    descriptions:
+      - "Brief description of the project"
+      - "Key achievement or feature"
+    custom_tag: "Tag1, Tag2"
+    is_team: false
+
+  - title: "Project Title 2"
+    image: "asset/image2.gif?height=300&width=300"
+    period: "2024.12"
+    descriptions:
+      - "Another project description"
+      - "Secondary note about the project"
+    custom_tag: "Category, Visualization"
+    is_team: true
+
+  - title: "Research Visualization"
+    image: "asset/research.png?height=300&width=300"
+    period: "2024.10"
+    descriptions:
+      - "Visualization of research findings"
+      - "Created using custom tools"
+    custom_tag: "Research, Data Analysis"
+    is_team: false

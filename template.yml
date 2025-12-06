@@ -1,0 +1,63 @@
+# CV Template Configuration
+# This file maps section names to template types
+
+# Meta configuration for PDF output
+meta:
+  title: "Curriculum Vitae"
+  theme_color: "#26428b"   # Primary color for headings/accents
+  font: "Libertinus Serif"
+  font_size: 11pt
+  lang: "en"
+  margin:
+    top: 1cm
+    bottom: 0.5cm
+    left: 1cm
+    right: 1cm
+
+# Section configuration
+# Each section defines:
+#   - name: Display name for the section (freely customizable)
+#   - template: Template type to render (see docs/templates.md)
+#   - source: Key in cv.yml that contains the data
+#   - enabled: (optional) Set to false to hide section
+
+sections:
+  - name: "Research Interest"
+    template: "text_block"
+    source: "research_interest"
+
+  - name: "Skills"
+    template: "skills_list"
+    source: "skills"
+
+  - name: "Research Experience"
+    template: "experience_list"
+    source: "research_experience"
+
+  - name: "Education"
+    template: "education"
+    source: "education"
+
+  - name: "Projects"
+    template: "experience_list"
+    source: "projects"
+
+  - name: "Scholarships"
+    template: "awards"
+    source: "scholarships"
+
+  - name: "Awards & Honors"
+    template: "awards"
+    source: "awards_honors"
+
+  - name: "Research Grants"
+    template: "awards"
+    source: "grants"
+
+  - name: "Additional Activity"
+    template: "single_entry"
+    source: "additional_activity"
+
+  - name: "Military Service"
+    template: "single_entry"
+    source: "military_service"

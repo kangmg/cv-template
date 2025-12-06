@@ -1,0 +1,63 @@
+name: Deploy CV Template to GitHub Pages
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: pip install pyyaml
+
+      - name: Generate JSON and Typst files
+        run: |
+          python scripts/yml2json.py cv.yml data/cv-data.json
+          python scripts/yml2json.py template.yml data/template.json
+          python scripts/yml2json.py gallery.yml data/gallery.json
+          python scripts/generate_typst.py
+
+      - name: Install Typst
+        run: |
+          curl -fsSL https://typst.community/typst-install/install.sh | sh
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+      - name: Compile PDF
+        run: typst compile --root . output/cv_output.typ output/CV.pdf
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install web dependencies
+        working-directory: web
+        run: npm install
+
+      - name: Copy data to web public folder
+        run: |
+          mkdir -p web/public/data
+          cp data/*.json web/public/data/
+          cp output/CV.pdf web/public/data/ || true
+
+      - name: Build Vite project
+        working-directory: web
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./web/dist
+          publish_branch: gh-pages
