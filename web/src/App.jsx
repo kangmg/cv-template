@@ -130,13 +130,13 @@ function App() {
             className={`nav-btn ${activeTab === 'cv' ? 'active' : ''}`}
             onClick={() => setActiveTab('cv')}
           >
-            <FileText size={18} /> CV
+            <FileText size={18} /> CV (Web)
           </button>
           <button
             className={`nav-btn ${activeTab === 'pdf' ? 'active' : ''}`}
             onClick={() => setActiveTab('pdf')}
           >
-            <FileDown size={18} /> PDF
+            <FileDown size={18} /> CV (PDF)
           </button>
           <button
             className={`nav-btn ${activeTab === 'gallery' ? 'active' : ''}`}

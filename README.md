@@ -1,10 +1,10 @@
 # CV Template
 
-> 🌏 [한국어](README_KR.md) | **English**
+> [한국어](README_KR.md) | **English**
 
-📝 **Just edit YAML files and your CV website + PDF are automatically generated!**
+**Just edit YAML files and your CV website + PDF are automatically generated!**
 
-## 🚀 Quick Start (5 min)
+## Quick Start (5 min)
 
 ### Step 1: Fork Repository
 1. Fork this repository
@@ -54,13 +54,13 @@ education:
 
 ### Step 3: Push and Auto Deploy!
 After committing your changes:
-- ✅ PDF generated
-- ✅ Website deployed
-- 📍 `https://[username].github.io/[repo-name]/`
+- PDF generated
+- Website deployed
+- `https://[username].github.io/[repo-name]/`
 
 ---
 
-## ⚙️ Section Customization (template.yml)
+## Section Customization (template.yml)
 
 Change section order, rename, or disable sections:
 
@@ -95,7 +95,7 @@ See [docs/templates.md](docs/templates.md) for detailed field specs.
 
 ---
 
-## 📁 Project Gallery (gallery.yml)
+## Project Gallery (gallery.yml)
 
 ```yaml
 project_highlights:
@@ -110,7 +110,7 @@ project_highlights:
 
 ---
 
-## 💻 Local Development (Optional)
+## Local Development (Optional)
 
 ```bash
 # 1. Install dependencies
@@ -126,16 +126,13 @@ cd web && npm run dev
 
 ---
 
-## 📋 Structure
+## Structure
 
 ```
-├── cv.yml           # 📝 Your CV data
-├── template.yml     # ⚙️ Section config
-├── gallery.yml      # 🖼️ Gallery data
+├── cv.yml           # Your CV data
+├── template.yml     # Section config
+├── gallery.yml      # Gallery data
 ├── scripts/         # Build scripts
 ├── typst/           # PDF generator
 └── web/             # Web UI
 ```
-
-## License
-MIT
