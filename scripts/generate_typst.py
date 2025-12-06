@@ -223,10 +223,10 @@ def generate_publications(name: str, data: list) -> str:
             citation += f", {pages}"
         citation += "."
         
-        result += f'''#{i}. {citation}
+        result += f'''{i}. {citation}
 '''
         if doi:
-            result += f'   DOI: link("https://doi.org/{doi}")[{doi}]\n'
+            result += f'   DOI: #link("https://doi.org/{doi}")[{escape_typst(doi)}]\n'
         result += '\n'
     
     return result
