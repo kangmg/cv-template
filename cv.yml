@@ -9,21 +9,20 @@ profile:
 
 # Research Interest
 research_interest: |
-  My research focuses on developing and applying machine learning methods to accelerate 
-  computational chemistry simulations. I am particularly interested in creating interpretable 
-  models that can predict molecular properties and reaction mechanisms with quantum chemical 
-  accuracy. My work bridges the gap between traditional ab initio methods and data-driven 
-  approaches, aiming to enable high-throughput virtual screening for drug discovery and 
-  materials design.
+  My research focuses on developing novel computational methods for studying complex 
+  molecular systems. I am particularly interested in combining quantum mechanical 
+  calculations with machine learning approaches to predict chemical reactivity and 
+  molecular properties. The goal is to accelerate the discovery of new materials 
+  and therapeutic compounds through efficient computational screening.
 
 # Keywords for research interest
 keywords:
-  - "Machine Learning"
   - "Computational Chemistry"
-  - "Quantum Chemistry"
-  - "Molecular Dynamics"
-  - "Drug Discovery"
-  - "Materials Science"
+  - "Machine Learning"
+  - "Quantum Mechanics"
+  - "Molecular Modeling"
+  - "Drug Design"
+  - "Materials Discovery"
 
 # Skills
 skills:
@@ -40,12 +39,12 @@ skills:
   
   Computational_Chemistry:
     - "Gaussian, ORCA, Psi4"
-    - "GROMACS, LAMMPS"
+    - "GROMACS, AMBER"
     - "RDKit, OpenBabel"
-    - "ASE (Atomic Simulation Environment)"
+    - "ASE, PyMOL"
   
   Tools_and_Technologies:
-    - "Git, Docker, Conda"
+    - "Git, Docker, Singularity"
     - "HPC/SLURM"
     - "Jupyter, VSCode"
     - "LaTeX, Markdown"
@@ -53,109 +52,110 @@ skills:
   Languages:
     - "English (Fluent)"
     - "Korean (Native)"
-    - "German (Basic)"
+    - "Spanish (Conversational)"
 
 # Research Experience
 research_experience:
   - title: "Graduate Research Assistant"
     duration: "Sep 2021 - Present"
-    organization: "Computational Chemistry Lab, University Name"
-    advisor: "Advisor: Prof. Advisor Name"
+    organization: "Computational Chemistry Lab, State University"
+    advisor: "Advisor: Prof. Research Supervisor"
     achievements:
-      - "Developed a graph neural network model for predicting molecular properties with 15% improved accuracy over baseline methods"
-      - "Published 3 first-author papers in peer-reviewed journals (J. Chem. Theory Comput., J. Phys. Chem. A)"
-      - "Presented research findings at 5 international conferences including ACS and WATOC"
-      - "Mentored 2 undergraduate students on machine learning projects"
+      - "Developed machine learning models for predicting molecular properties with improved accuracy"
+      - "Published research findings in peer-reviewed computational chemistry journals"
+      - "Presented work at national and international scientific conferences"
+      - "Mentored undergraduate students on computational research projects"
 
-  - title: "Research Intern"
+  - title: "Summer Research Intern"
     duration: "Jun 2021 - Aug 2021"
-    organization: "Pharmaceutical Research Institute"
+    organization: "Institute for Computational Science"
     achievements:
-      - "Implemented high-throughput virtual screening pipeline for drug candidate identification"
-      - "Screened over 1 million compounds using ML-based ADMET prediction models"
-      - "Identified 15 promising lead compounds for further experimental validation"
+      - "Implemented computational workflows for high-throughput molecular screening"
+      - "Analyzed large datasets of molecular structures and properties"
+      - "Contributed to collaborative research projects with experimental groups"
 
   - title: "Undergraduate Research Assistant"
     duration: "Mar 2019 - Aug 2020"
-    organization: "Materials Science Lab, Previous University"
-    advisor: "Advisor: Prof. Previous Advisor"
+    organization: "Chemistry Department, Previous University"
+    advisor: "Advisor: Prof. Undergraduate Mentor"
     achievements:
-      - "Conducted DFT calculations to study catalytic mechanisms of transition metal complexes"
-      - "Co-authored 1 paper in Catalysis Today"
-      - "Developed Python scripts for automated data analysis and visualization"
+      - "Performed quantum chemical calculations on small molecule systems"
+      - "Assisted in data analysis and visualization for research publications"
+      - "Developed scripts for automating computational workflows"
 
 # Education
 education:
-  university: "University Name"
+  university: "State University"
   duration: "Sep 2021 - Present"
-  degree: "Ph.D. in Chemistry (Computational Chemistry)"
-  gpa: "3.95 / 4.00"
+  degree: "Ph.D. in Chemistry (Computational Chemistry Track)"
+  gpa: "3.92 / 4.00"
 
 # Publications (as projects)
 projects:
-  - title: "Machine Learning Potentials for Organic Reactions"
+  - title: "Novel Computational Methods for Reaction Prediction"
     duration: "2024"
-    organization: "J. Chem. Theory Comput. (First Author)"
-    link: "https://doi.org/10.1021/example"
+    organization: "Journal of Computational Chemistry (First Author)"
+    link: "https://doi.org/10.1002/jcc.example"
     achievements:
-      - "Developed transferable ML potentials for organic reaction modeling"
-      - "Achieved chemical accuracy (< 1 kcal/mol) for barrier heights"
-      - "Open-sourced code and trained models on GitHub"
+      - "Developed new algorithms for predicting chemical reaction outcomes"
+      - "Validated methods against experimental benchmark datasets"
+      - "Released open-source implementation for community use"
 
-  - title: "Graph Neural Networks for Molecular Property Prediction"
+  - title: "Machine Learning Models for Molecular Property Prediction"
     duration: "2023"
-    organization: "J. Phys. Chem. A (First Author)"
+    organization: "Journal of Chemical Information and Modeling (First Author)"
     achievements:
-      - "Proposed novel attention mechanism for molecular graphs"
-      - "Outperformed existing methods on 8 benchmark datasets"
-      - "Model interpretability analysis revealed key structural features"
+      - "Designed neural network architectures for molecular representation"
+      - "Achieved state-of-the-art performance on standard benchmarks"
+      - "Analyzed model interpretability and feature importance"
 
-  - title: "High-Throughput Screening with Active Learning"
+  - title: "Computational Study of Catalytic Systems"
     duration: "2023"
-    organization: "J. Chem. Inf. Model. (Co-author)"
+    organization: "Chemical Physics Letters (Co-author)"
     achievements:
-      - "Reduced computational cost by 80% using active learning strategies"
-      - "Applied to drug discovery and materials design problems"
+      - "Investigated reaction mechanisms using density functional theory"
+      - "Identified key intermediates and transition states"
+      - "Provided insights for experimental catalyst design"
 
 # Awards and Honors
 awards:
-  - name: "Outstanding Graduate Student Award"
-    institution: "Department of Chemistry, University Name"
+  - name: "Outstanding Graduate Student Research Award"
+    institution: "Department of Chemistry, State University"
     year: "2024"
     amount: ""
 
-  - name: "Best Poster Award"
-    institution: "International Conference on Computational Chemistry"
+  - name: "Best Poster Presentation"
+    institution: "Regional Computational Chemistry Symposium"
     year: "2023"
     amount: ""
 
   - name: "Graduate Research Fellowship"
-    institution: "National Science Foundation"
+    institution: "National Research Foundation"
     year: "2022-2025"
-    amount: "$150,000"
+    amount: "$120,000"
 
-  - name: "Dean's List"
+  - name: "Undergraduate Research Excellence Award"
     institution: "Previous University"
-    year: "2018-2020"
+    year: "2020"
     amount: ""
 
 # Scholarships
 scholarships:
-  - name: "Presidential Fellowship"
-    institution: "University Name"
+  - name: "Graduate Excellence Fellowship"
+    institution: "State University"
     year: "2021-2022"
-    amount: "$30,000"
+    amount: "$25,000"
 
-  - name: "Travel Grant for Conference Attendance"
-    institution: "American Chemical Society"
+  - name: "Conference Travel Award"
+    institution: "Graduate Student Association"
     year: "2023"
-    amount: "$1,500"
+    amount: "$1,200"
 
 # Teaching Experience (as additional activity)
 additional_activity:
-  activity: "Teaching Assistant - Physical Chemistry II"
-  duration: "Jan 2022 - May 2024"
-  description: "Led recitation sections, graded assignments, and held office hours for undergraduate physical chemistry course (3 semesters)"
+  activity: "Teaching Assistant - Computational Chemistry Course"
+  duration: "Jan 2022 - Dec 2024"
+  description: "Assisted with laboratory sessions, graded assignments, and provided tutoring for graduate-level computational chemistry course (6 semesters)"
 
 # Military Service (optional, can be disabled in template.yml)
 military_service:
