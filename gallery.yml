@@ -1,30 +1,30 @@
-# Project Gallery Configuration
-# This file contains project highlights for the gallery view
-
 project_highlights:
-  - title: "Project Title 1"
-    image: "asset/image1.png?height=300&width=300"
-    period: "2025.01"
+  - title: "ML-Driven Molecular Property Prediction"
+    image: "asset/ml_chemistry.png"
+    period: "2024"
     descriptions:
-      - "Brief description of the project"
-      - "Key achievement or feature"
-    custom_tag: "Tag1, Tag2"
+      - "Developed graph neural network models for predicting molecular properties"
+      - "Achieved state-of-the-art accuracy on benchmark datasets"
+      - "Open-sourced implementation with pre-trained models"
+    custom_tag: "Machine Learning, PyTorch, Chemistry"
     is_team: false
 
-  - title: "Project Title 2"
-    image: "asset/image2.gif?height=300&width=300"
-    period: "2024.12"
+  - title: "High-Throughput Drug Screening Platform"
+    image: "asset/drug_discovery.png"
+    period: "2023"
     descriptions:
-      - "Another project description"
-      - "Secondary note about the project"
-    custom_tag: "Category, Visualization"
+      - "Built computational pipeline for virtual screening of drug candidates"
+      - "Screened over 1M compounds using ML-based ADMET prediction"
+      - "Identified promising lead compounds for experimental validation"
+    custom_tag: "Drug Discovery, Python, HPC"
     is_team: true
 
-  - title: "Research Visualization"
-    image: "asset/research.png?height=300&width=300"
-    period: "2024.10"
+  - title: "Computational Materials Design Toolkit"
+    image: "asset/materials_design.png"
+    period: "2023"
     descriptions:
-      - "Visualization of research findings"
-      - "Created using custom tools"
-    custom_tag: "Research, Data Analysis"
+      - "Created workflow for automated materials property calculations"
+      - "Integrated DFT and machine learning methods"
+      - "Applied to catalyst and battery material discovery"
+    custom_tag: "Materials Science, DFT, Automation"
     is_team: false
