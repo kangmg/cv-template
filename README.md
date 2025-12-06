@@ -57,7 +57,22 @@ After committing your changes:
 - ✅ PDF generated
 - ✅ Website deployed
 - 📍 `https://[username].github.io/[repo-name]/`
-- 📄 Download PDF: `https://[username].github.io/[repo-name]/data/CV.pdf`
+
+### 📥 Download Files
+
+Once deployed, you can download the generated files directly:
+
+**PDF Download:**
+```
+https://[username].github.io/[repo-name]/data/CV.pdf
+```
+
+**Typst Source (editable):**
+```
+https://[username].github.io/[repo-name]/data/cv_output.typ
+```
+
+> Right-click → "Save Link As..." to download
 
 ---
 

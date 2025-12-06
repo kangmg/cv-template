@@ -57,7 +57,22 @@ education:
 - ✅ PDF 생성
 - ✅ 웹사이트 배포
 - 📍 `https://[username].github.io/[repo-name]/`
-- 📄 PDF 다운로드: `https://[username].github.io/[repo-name]/data/CV.pdf`
+
+### 📥 파일 다운로드
+
+배포 완료 후 생성된 파일을 직접 다운로드할 수 있습니다:
+
+**PDF 다운로드:**
+```
+https://[username].github.io/[repo-name]/data/CV.pdf
+```
+
+**Typst 원본 (수정 가능):**
+```
+https://[username].github.io/[repo-name]/data/cv_output.typ
+```
+
+> 우클릭 → "다른 이름으로 링크 저장"으로 다운로드
 
 ---
 

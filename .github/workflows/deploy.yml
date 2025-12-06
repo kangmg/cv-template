@@ -56,6 +56,7 @@ jobs:
           mkdir -p web/public/data
           cp data/*.json web/public/data/
           cp output/CV.pdf web/public/data/ || true
+          cp output/cv_output.typ web/public/data/ || true
 
       - name: Build Vite project
         working-directory: web
