@@ -433,9 +433,13 @@ function Gallery({ items }) {
           <div className="gallery-content">
             <div className="gallery-title">{item.title}</div>
             <div className="gallery-period">{item.period}</div>
-            <div className="gallery-description">
-              {item.descriptions?.join(' • ')}
-            </div>
+            {item.descriptions && item.descriptions.length > 0 && (
+              <ul>
+                {item.descriptions.map((desc, j) => (
+                  <li key={j}>{desc}</li>
+                ))}
+              </ul>
+            )}
             <div className="gallery-tags">
               {item.is_team && <span className="team-badge">Team</span>}
               {item.custom_tag?.split(',').map((tag, j) => (

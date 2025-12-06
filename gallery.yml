@@ -3,7 +3,9 @@ project_highlights:
     image: "asset/ml_chemistry.png"
     period: "2024"
     descriptions:
-      - "Graph neural networks for molecular properties with state-of-the-art accuracy"
+      - "Graph neural networks for molecular properties"
+      - "State-of-the-art accuracy on benchmark datasets"
+      - "Open-sourced implementation with pre-trained models"
     custom_tag: "Machine Learning, PyTorch, Chemistry"
     is_team: false
 
@@ -11,7 +13,9 @@ project_highlights:
     image: "asset/drug_discovery.png"
     period: "2023"
     descriptions:
-      - "Computational pipeline screening 1M+ compounds using ML-based ADMET prediction"
+      - "Computational pipeline for virtual screening"
+      - "Screened 1M+ compounds using ML-based ADMET prediction"
+      - "Identified promising lead compounds for validation"
     custom_tag: "Drug Discovery, Python, HPC"
     is_team: true
 
@@ -19,6 +23,8 @@ project_highlights:
     image: "asset/materials_design.png"
     period: "2023"
     descriptions:
-      - "Automated workflow integrating DFT and ML for catalyst discovery"
+      - "Automated workflow for materials property calculations"
+      - "Integrated DFT and machine learning methods"
+      - "Applied to catalyst and battery material discovery"
     custom_tag: "Materials Science, DFT, Automation"
     is_team: false

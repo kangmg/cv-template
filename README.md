@@ -54,9 +54,9 @@ education:
 
 ### Step 3: Push and Auto Deploy!
 After committing your changes:
-- ✅ PDF generated
-- ✅ Website deployed
-- 📍 `https://[username].github.io/[repo-name]/`
+- PDF generated
+- Website deployed
+- `https://[username].github.io/[repo-name]/`
 
 ### 📥 Download Files
 
@@ -73,6 +73,70 @@ https://[username].github.io/[repo-name]/data/cv_output.typ
 ```
 
 > Right-click → "Save Link As..." to download
+
+---
+
+## 🔄 How It Works
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                     USER EDITS (Local/GitHub)                    │
+├─────────────────────────────────────────────────────────────────┤
+│  cv.yml          template.yml        gallery.yml      asset/    │
+│  (CV data)       (sections)          (projects)       (images)  │
+└────────┬─────────────────┬────────────────┬──────────────┬──────┘
+         │                 │                │              │
+         └─────────────────┴────────────────┴──────────────┘
+                                  │
+                         git push to main
+                                  │
+                                  ▼
+         ┌────────────────────────────────────────────────┐
+         │         GitHub Actions Workflow                │
+         └────────────────────────────────────────────────┘
+                                  │
+         ┌────────────────────────┴────────────────────────┐
+         │                                                  │
+         ▼                                                  ▼
+┌─────────────────┐                              ┌──────────────────┐
+│  Python Build   │                              │   Web Build      │
+├─────────────────┤                              ├──────────────────┤
+│ yml2json.py     │                              │ npm install      │
+│   ↓             │                              │   ↓              │
+│ cv-data.json    │──────┐                       │ Copy data/       │
+│ template.json   │      │                       │ Copy asset/      │
+│ gallery.json    │      │                       │   ↓              │
+│   ↓             │      │                       │ npm run build    │
+│ generate_typst  │      │                       │   ↓              │
+│   ↓             │      │                       │ web/dist/        │
+│ cv_output.typ   │      │                       └────────┬─────────┘
+│   ↓             │      │                                │
+│ typst compile   │      │                                │
+│   ↓             │      │                                │
+│ CV.pdf          │      │                                │
+└────────┬────────┘      │                                │
+         │               │                                │
+         └───────────────┴────────────────────────────────┘
+                                  │
+                                  ▼
+                    ┌──────────────────────────┐
+                    │   GitHub Pages Deploy    │
+                    └──────────────────────────┘
+                                  │
+         ┌────────────────────────┴────────────────────────┐
+         │                                                  │
+         ▼                                                  ▼
+┌─────────────────┐                              ┌──────────────────┐
+│   Web UI        │                              │  Download Files  │
+├─────────────────┤                              ├──────────────────┤
+│ • CV (Web)      │                              │ • CV.pdf         │
+│ • CV (PDF)      │                              │ • cv_output.typ  │
+│ • Gallery       │                              │ • *.json         │
+│ • Dark/Light    │                              └──────────────────┘
+└─────────────────┘
+
+         https://[user].github.io/[repo]/
+```
 
 ---
 
