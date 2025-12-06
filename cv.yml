@@ -1,10 +1,10 @@
 # Personal Information
 profile:
-  name: "Alex Johnson"
+  name: "Your Name"
   title: "Ph.D. Candidate in Computational Chemistry"
-  email: "alex.johnson@university.edu"
-  github: "github.com/alexjohnson"
-  blog: "alexjohnson.science"
+  email: "your.email@example.com"
+  github: "github.com/yourusername"
+  blog: "yourblog.com"
   update: "2025-01-06"
 
 # Research Interest
@@ -60,7 +60,7 @@ research_experience:
   - title: "Graduate Research Assistant"
     duration: "Sep 2021 - Present"
     organization: "Computational Chemistry Lab, University Name"
-    advisor: "Advisor: Prof. Jane Smith"
+    advisor: "Advisor: Prof. Advisor Name"
     achievements:
       - "Developed a graph neural network model for predicting molecular properties with 15% improved accuracy over baseline methods"
       - "Published 3 first-author papers in peer-reviewed journals (J. Chem. Theory Comput., J. Phys. Chem. A)"
@@ -78,7 +78,7 @@ research_experience:
   - title: "Undergraduate Research Assistant"
     duration: "Mar 2019 - Aug 2020"
     organization: "Materials Science Lab, Previous University"
-    advisor: "Advisor: Prof. John Doe"
+    advisor: "Advisor: Prof. Previous Advisor"
     achievements:
       - "Conducted DFT calculations to study catalytic mechanisms of transition metal complexes"
       - "Co-authored 1 paper in Catalysis Today"
