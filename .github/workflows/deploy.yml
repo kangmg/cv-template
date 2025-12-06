@@ -53,6 +53,8 @@ jobs:
 
       - name: Build Vite project
         working-directory: web
+        env:
+          BASE_PATH: /${{ github.event.repository.name }}/
         run: npm run build
 
       - name: Deploy to GitHub Pages
