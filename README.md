@@ -1,138 +1,140 @@
 # CV Template
 
-📝 **YAML 파일만 수정하면 자동으로 이력서 웹사이트와 PDF가 생성됩니다!**
+> 🌏 [한국어](README_KR.md) | **English**
 
-## 🚀 빠른 시작 (5분)
+📝 **Just edit YAML files and your CV website + PDF are automatically generated!**
 
-### 1단계: 저장소 Fork
-1. 이 저장소를 Fork 하세요
-2. Settings → Pages → Source를 **GitHub Actions**로 설정
+## 🚀 Quick Start (5 min)
 
-### 2단계: 내 정보 입력 (cv.yml)
-`cv.yml` 파일을 열고 내 정보로 수정하세요:
+### Step 1: Fork Repository
+1. Fork this repository
+2. Go to Settings → Pages → Set Source to **GitHub Actions**
+
+### Step 2: Edit Your Info (cv.yml)
+Open `cv.yml` and update with your information:
 
 ```yaml
-# 기본 정보
+# Basic Info
 profile:
-  name: "홍길동"
-  title: "백엔드 개발자"
-  email: "hong@example.com"
-  github: "github.com/hong"
+  name: "John Doe"
+  title: "Backend Developer"
+  email: "john@example.com"
+  github: "github.com/johndoe"
   update: "2025-01-01"
 
-# 자기소개
+# About Me
 research_interest: |
-  저는 웹 개발에 관심이 있으며...
+  I am passionate about web development...
 
-# 기술 스택
+# Skills
 skills:
-  프로그래밍:
+  Programming:
     - "Python, JavaScript"
     - "React, Node.js"
-  언어:
-    - "한국어 (원어민)"
-    - "영어 (비즈니스)"
+  Languages:
+    - "English (Native)"
+    - "Korean (Intermediate)"
 
-# 경력
+# Experience
 research_experience:
-  - title: "백엔드 개발자"
-    duration: "2023.01 - 현재"
-    organization: "회사명"
+  - title: "Backend Developer"
+    duration: "Jan 2023 - Present"
+    organization: "Company Name"
     achievements:
-      - "API 서버 개발 및 운영"
-      - "성능 50% 개선"
+      - "Developed and maintained API servers"
+      - "Improved performance by 50%"
 
-# 학력
+# Education
 education:
-  university: "OO대학교"
-  duration: "2019.03 - 2023.02"
-  degree: "컴퓨터공학과 학사"
+  university: "University Name"
+  duration: "Mar 2019 - Feb 2023"
+  degree: "B.S. in Computer Science"
   gpa: "4.0 / 4.5"
 ```
 
-### 3단계: 푸시하면 자동 배포!
-수정 후 커밋하면 자동으로:
-- ✅ PDF 생성
-- ✅ 웹사이트 배포
+### Step 3: Push and Auto Deploy!
+After committing your changes:
+- ✅ PDF generated
+- ✅ Website deployed
 - 📍 `https://[username].github.io/[repo-name]/`
 
 ---
 
-## ⚙️ 섹션 커스터마이징 (template.yml)
+## ⚙️ Section Customization (template.yml)
 
-섹션 순서를 바꾸거나, 이름을 변경하거나, 비활성화할 수 있습니다:
+Change section order, rename, or disable sections:
 
 ```yaml
 sections:
-  - name: "About Me"           # 표시될 섹션 제목
-    template: "text_block"      # 템플릿 종류
-    source: "research_interest" # cv.yml의 데이터 키
+  - name: "About Me"            # Display name
+    template: "text_block"       # Template type
+    source: "research_interest"  # Key in cv.yml
 
-  - name: "경력"
+  - name: "Experience"
     template: "experience_list"
     source: "research_experience"
 
-  - name: "숨기고 싶은 섹션"
+  - name: "Hidden Section"
     template: "awards"
     source: "awards"
-    enabled: false              # false로 숨기기
+    enabled: false               # Set false to hide
 ```
 
-### 사용 가능한 템플릿
+### Available Templates
 
-| 템플릿 | 용도 | 예시 |
-|--------|------|------|
-| `text_block` | 텍스트 단락 | 자기소개, 요약 |
-| `skills_list` | 카테고리별 목록 | 기술 스택 |
-| `experience_list` | 타임라인 형식 | 경력, 프로젝트 |
-| `education` | 학력 정보 | 대학교 |
-| `awards` | 수상 내역 | 장학금, 상 |
-| `single_entry` | 단일 항목 | 병역 |
+| Template | Use Case | Example |
+|----------|----------|---------|
+| `text_block` | Text paragraph | About me, Summary |
+| `skills_list` | Categorized list | Skills, Languages |
+| `experience_list` | Timeline format | Experience, Projects |
+| `education` | Education info | University |
+| `awards` | Award entries | Scholarships, Honors |
+| `single_entry` | Single item | Military service |
 
-자세한 필드 설명: [docs/templates.md](docs/templates.md)
+See [docs/templates.md](docs/templates.md) for detailed field specs.
 
 ---
 
-## 📁 프로젝트 갤러리 (gallery.yml)
+## 📁 Project Gallery (gallery.yml)
 
 ```yaml
 project_highlights:
-  - title: "프로젝트 이름"
+  - title: "Project Name"
     image: "asset/screenshot.png"
-    period: "2024.01"
+    period: "Jan 2024"
     descriptions:
-      - "주요 기능 설명"
+      - "Key feature description"
     custom_tag: "React, TypeScript"
     is_team: true
 ```
 
 ---
 
-## 💻 로컬 개발 (선택)
+## 💻 Local Development (Optional)
 
 ```bash
-# 1. 의존성 설치
+# 1. Install dependencies
 pip install -r requirements.txt
 cd web && npm install && cd ..
 
-# 2. PDF 및 JSON 생성
+# 2. Generate PDF and JSON
 ./scripts/compile.sh
 
-# 3. 로컬 미리보기
+# 3. Local preview
 cd web && npm run dev
 ```
 
 ---
 
-## 📋 구조
+## 📋 Structure
 
 ```
-├── cv.yml           # 📝 내 이력서 데이터
-├── template.yml     # ⚙️ 섹션 설정
-├── gallery.yml      # 🖼️ 갤러리 데이터
-├── scripts/         # 빌드 스크립트
-├── typst/           # PDF 생성기
-└── web/             # 웹 UI
+├── cv.yml           # 📝 Your CV data
+├── template.yml     # ⚙️ Section config
+├── gallery.yml      # 🖼️ Gallery data
+├── scripts/         # Build scripts
+├── typst/           # PDF generator
+└── web/             # Web UI
 ```
 
 ## License
