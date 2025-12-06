@@ -23,6 +23,7 @@ jobs:
 
       - name: Generate JSON and Typst files
         run: |
+          mkdir -p data output
           python scripts/yml2json.py cv.yml data/cv-data.json
           python scripts/yml2json.py template.yml data/template.json
           python scripts/yml2json.py gallery.yml data/gallery.json
