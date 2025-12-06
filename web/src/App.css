@@ -44,7 +44,9 @@
 }
 
 /* Reset & Base */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -293,6 +295,7 @@ body {
 /* Skills List */
 .skills {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 
@@ -578,7 +581,8 @@ body {
 }
 
 /* Loading & Error States */
-.loading, .error {
+.loading,
+.error {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -606,47 +610,51 @@ body {
   .header {
     padding: 3rem 1rem 2rem;
   }
-  
+
   .header h1 {
     font-size: 2rem;
   }
-  
+
   .header .subtitle {
     font-size: 1.125rem;
   }
-  
+
   .theme-toggle {
     top: 1rem;
     right: 1rem;
   }
-  
+
   .contact-info {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.75rem;
   }
-  
+
   .nav {
     gap: 0.25rem;
   }
-  
+
   .nav-btn {
     padding: 0.5rem 0.75rem;
     font-size: 0.8125rem;
   }
-  
+
   .education-row,
   .award-item {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
   }
-  
+
   .award-details {
     text-align: left;
   }
-  
+
   .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills {
     grid-template-columns: 1fr;
   }
 }

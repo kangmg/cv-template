@@ -106,22 +106,29 @@ def generate_text_block(name: str, data, cv: dict) -> str:
     return result + "\n"
 
 def generate_skills_list(name: str, data: dict) -> str:
-    """Generate skills_list template section."""
+    """Generate skills_list template section with 2-column layout."""
     if not data or not isinstance(data, dict):
         return ""
     
     result = f'''// ============================================
 = {name}
 // ============================================
+#grid(
+  columns: 2,
+  gutter: 1em,
 '''
+    
     for category, items in data.items():
         category_display = category.replace("_", " ")
-        result += f'*{escape_typst(category_display)}*\n'
+        result += f'''  [
+    *{escape_typst(category_display)}*
+'''
         if isinstance(items, list):
             for item in items:
-                result += f'- {escape_typst(str(item))}\n'
-        result += '\n'
+                result += f'    - {escape_typst(str(item))}\n'
+        result += '  ],\n'
     
+    result += ')\n\n'
     return result
 
 def generate_experience_list(name: str, data: list) -> str:
