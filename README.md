@@ -54,9 +54,10 @@ education:
 
 ### Step 3: Push and Auto Deploy!
 After committing your changes:
-- PDF generated
-- Website deployed
-- `https://[username].github.io/[repo-name]/`
+- ✅ PDF generated
+- ✅ Website deployed
+- 📍 `https://[username].github.io/[repo-name]/`
+- 📄 Download PDF: `https://[username].github.io/[repo-name]/data/CV.pdf`
 
 ---
 

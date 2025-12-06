@@ -54,9 +54,10 @@ education:
 
 ### 3단계: 푸시하면 자동 배포!
 수정 후 커밋하면 자동으로:
-- PDF 생성
-- 웹사이트 배포
-- `https://[username].github.io/[repo-name]/`
+- ✅ PDF 생성
+- ✅ 웹사이트 배포
+- 📍 `https://[username].github.io/[repo-name]/`
+- 📄 PDF 다운로드: `https://[username].github.io/[repo-name]/data/CV.pdf`
 
 ---
 

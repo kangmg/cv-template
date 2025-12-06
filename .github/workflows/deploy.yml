@@ -71,26 +71,6 @@ jobs:
         with:
           path: ./web/dist
 
-      - name: Create Release
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: cv-${{ github.sha }}
-          name: CV Build - ${{ github.sha }}
-          body: |
-            Automatically generated CV files from commit ${{ github.sha }}.
-            
-            **Download:**
-            - [CV.pdf](https://github.com/${{ github.repository }}/releases/download/cv-${{ github.sha }}/CV.pdf)
-            - [cv_output.typ](https://github.com/${{ github.repository }}/releases/download/cv-${{ github.sha }}/cv_output.typ)
-            
-            **View Online:** https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
-          files: |
-            output/CV.pdf
-            output/cv_output.typ
-          fail_on_unmatched_files: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
   deploy:
     environment:
       name: github-pages
