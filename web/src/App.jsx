@@ -78,9 +78,9 @@ function App() {
       try {
         // Load JSON data files
         const [cvRes, templateRes, galleryRes] = await Promise.all([
-          fetch('/data/cv-data.json'),
-          fetch('/data/template.json'),
-          fetch('/data/gallery.json')
+          fetch('./data/cv-data.json'),
+          fetch('./data/template.json'),
+          fetch('./data/gallery.json')
         ])
 
         if (!cvRes.ok || !templateRes.ok) {
@@ -362,14 +362,14 @@ function PDFViewer() {
   return (
     <div className="pdf-viewer">
       <object
-        data="/data/CV.pdf"
+        data="./data/CV.pdf"
         type="application/pdf"
         width="100%"
         height="100%"
       >
         <div className="pdf-fallback">
           <p>PDF viewer not available in your browser.</p>
-          <a href="/data/CV.pdf" download>Download PDF</a>
+          <a href="./data/CV.pdf" download>Download PDF</a>
         </div>
       </object>
     </div>
